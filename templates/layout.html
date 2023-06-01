@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha384-FodIiaRlWbwU2IwBPjkmfaWKn51UJmxr5KeQb7KwK/lYvFcRxKXaoKCEk1ECH9qZ">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>{{ title  }}</title>
 </head>
@@ -25,6 +25,10 @@
 
     {% endblock %}
     </div>
+
+    <footer class="footer">Все права защищенны<br>
+        Ханн Солш
+    </footer>
 
 </div>
 </body>
