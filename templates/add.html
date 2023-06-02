@@ -1,1 +1,20 @@
 {% extends 'layout.html' %}
+
+
+{% block title %}
+<title>{{ title }}</title>
+{% endblock %}
+
+{% block content %}
+
+<form action="{{ url_for('input_data') }}", method="post", class="add_data_form">
+    <input type="text" name="word" class="word_input" placeholder="Введите английское слово" required 
+    pattern="^[a-zA-Z,.?!`- ]+$" autofocus><br>
+    <input type="text" name="translate" class="translate input" placeholder="Введите перевод слова на русском"
+    required
+    pattern="^[а-яёА-ЯЁ,.?!`- ]+$"><br>
+    <input type="submit" value="Создать" class="button button_create">
+</form>
+
+
+{% endblock %}
