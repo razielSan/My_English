@@ -14,12 +14,12 @@ lst_main_menu = [
     {'name': 'Добавить', 'url': '/add'},
     {'name': 'Обновить', 'url': '/update'},
     {'name': 'Удалить', 'url': '/delete'},
-    {'name': 'Show', 'url': '/show'},
+    {'name': 'Просмотр', 'url': '/show'},
 ]
  
 @app.route('/')
 def index():
-    return render_template('index.html', title='title', lst_main_menu=lst_main_menu)
+    return render_template('index.html', title='Главная', lst_main_menu=lst_main_menu)
 
 
 @app.route('/add')
@@ -45,7 +45,7 @@ def input_data():
 
 @app.route('/update')
 def update():
-    return render_template('update.html', title='Просмотр', lst_main_menu=lst_main_menu)
+    return render_template('update.html', title='Обновить', lst_main_menu=lst_main_menu)
 
 
 @app.route('/delete')
@@ -72,7 +72,8 @@ def random_note():
 def all_notes():
     querry_all = English.select()
     count_words = len(English.select())
-    return render_template('all_notes.html', count_words=count_words, lst_main_menu=lst_main_menu)
+    return render_template('all_notes.html', querry_all=querry_all, 
+                           count_words=count_words, lst_main_menu=lst_main_menu)
 
 
 @app.route('/count_notes', methods=['POST'])

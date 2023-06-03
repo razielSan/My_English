@@ -1,1 +1,17 @@
-Hello World
+{% extends 'layout.html '%}
+
+{% block content %}
+
+<div class="all_notes">
+    <div class="empty_block"></div>
+    </h>Количество записей {{ count_words }}</h1>
+    <ol>
+        {% for item in querry_all %}
+
+        <li><p>{{ item.word }} - {{ item.translate }}</p></li>
+
+    {% endfor %}
+    </ol>
+</div>
+
+{% endblock %}

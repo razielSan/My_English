@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<div class="count_notes">
+    <div class="empty_block"></div>
+    {% for row in query_count %}
+
+        <p>{{ row.word }} - {{ row.translate }}</p>
+
+    {% endfor %}
+</div>
+
+{% endblock %}
