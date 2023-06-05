@@ -2,19 +2,30 @@
 
 
 {% block title %}
-<title>{{ title }}</title>
+    <title>Добавление</title>
 {% endblock %}
 
 {% block content %}
+<div class="add_word">
+<div class="empty_block"></div>
 
-<form action="{{ url_for('input_data') }}", method="post", class="add_data_form">
-    <input type="text" name="word" class="word_input" placeholder="Введите английское слово" required 
-    pattern="^[a-zA-Z,.?!`- ]+$" autofocus><br>
-    <input type="text" name="translate" class="translate input" placeholder="Введите перевод слова на русском"
-    required
-    pattern="^[а-яёА-ЯЁ,.?!`- ]+$"><br>
-    <input type="submit" value="Создать" class="button button_create">
-</form>
+{% for cat, msg in get_flashed_messages(True) %}
+
+    <div class="flash {{ cat }}">{{ msg|safe }}</div>
+
+{% endfor %}
+
+    <form action="{{ url_for('input_data') }}", method="post", class="add_data_form">
+        <input type="text" name="word" class="word_input" placeholder="Введите английское слово" required 
+        pattern="^[a-zA-Z,.?!`- ]+$" autofocus><br>
+        <input type="text" name="translate" class="translate input" placeholder="Введите перевод слова на русском"
+        required
+        pattern="^[а-яёА-ЯЁ,.?!`- ]+$"><br>
+        <input type="submit" value="Создать" class="button button_create">
+    </form>
+</div>
+
+
 
 
 {% endblock %}

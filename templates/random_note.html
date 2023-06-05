@@ -6,7 +6,7 @@
 <div class="random_note">
 <h1 class="random_word">{{ random_query.word.capitalize() }}</h1>
 
-<form action="/random_note" method="get" class="all_notes_form">
+<form action="{{ url_for('random_note') }}" method="get" class="all_notes_form">
     <input type="submit" value="Случайная запись" class="button">
 </form>
 

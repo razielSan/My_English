@@ -1,18 +1,15 @@
 {% extends 'layout.html' %}
 
-{% block title %}
-<title>{{ title }}</title>
-{% endblock %}
-
 {% block content %}
 
-<h1>{{ title }} страница</h1>
-<h5>The beyond of template</h5>
+    <div class="info">
+        <div class="description">
+
+            Redirect - Hello World World Hello
+
+        </div>
+
+        <img src="{{ url_for('static', filename='img/img1.png') }}" class="logo">
+    </div>
 
 {% endblock %}
-
-{% block text %}
-
-    TTTTTTTTTTTTTTT
-
-{% endblock%}

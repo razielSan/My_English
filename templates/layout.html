@@ -10,11 +10,13 @@
 <div class="wrap"> 
     <div class="header">
         <h1 class="logo_h1">My English coach</h1>
-        <ul class="menu">
-            {% for link in lst_main_menu %}
-            <li><a href="{{ link.url }}">{{ link.name }}</a></li>
-            {% endfor %}
-        </ul>    
+        <div class="menu">
+            <a href="/"><p>Главная</p></a>
+            <a href="add_page"><p>Добавить</p></a>
+            <a href="update_page"><p>Обновить</p></a>
+            <a href="delete_page"><p>Удалить</p></a>
+            <a href="show"><p>Показать</p></a>
+        </div>   
     </div>
 
     <div class="main">
